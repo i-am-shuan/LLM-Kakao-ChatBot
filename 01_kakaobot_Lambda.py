@@ -57,7 +57,7 @@ def lambda_handler(event, context):
 # 답변/사진 요청 및 응답 확인 함수
 def responseOpenAI(request,response_queue,filename):
     # 사용자가 버튼을 클릭하여 답변 완성 여부를 다시 봤을 시
-    if '생각 다 끝났나요?' in request["userRequest"]["utterance"]:
+    if '답변해주세요' in request["userRequest"]["utterance"]:
         # 텍스트 파일 열기
         with open(filename) as f:
             last_update = f.read()
@@ -121,15 +121,15 @@ def timeover():
       "outputs":[
          {
             "simpleText":{
-               "text":"아직 제가 생각이 끝나지 않았어요??\n잠시후 아래 말풍선을 눌러주세요?"
+               "text":"카카오의 정책에 따라 잠시 휴식을 취하겠습니다. 조금 후에 아래의 말풍선을 클릭해 주세요 :)"
             }
          }
       ],
       "quickReplies":[
          {
             "action":"message",
-            "label":"생각 다 끝났나요??",
-            "messageText":"생각 다 끝났나요?"
+            "label":"답변해주세요",
+            "messageText":"답변해주세요"
          }]}}
     return response
 

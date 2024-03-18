@@ -17,6 +17,8 @@ ChatGPT로 질의응답 및 DALLE.2 모델기반 그림을 그려주는 AI 챗�
 
 ---
 ### 서비스 사용방법
+- OpenAI API KEY 발급하기: https://server-engineer.tistory.com/983
+
 - GPT에게 질문하기
   - 명령어: /ask
   - 예시: /ask 오늘 서울의 날씨를 알려줘.
